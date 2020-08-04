@@ -7,13 +7,16 @@ class Student:
         self.m2 = m2
         self.m3 = m3
 
+#instance method can be called by self object
     def avg(self):
         return (self.m1+self.m2+self.m3)/3
 
+#class method can only be accessed by cls keyword
     @classmethod
     def getSchool(cls):
         return cls.school
-    
+
+#static method can be accessed directly without any keyword
     @staticmethod
     def info():
         print("This is Student class")
