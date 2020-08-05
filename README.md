@@ -7,3 +7,6 @@ Python work:
 4. Variables
 5. Types of methods  -- methodTypes.py
 6. Inheritance -- inheritance.py
+7. Polymorphism
+   7.1 Ducktyping
+    
