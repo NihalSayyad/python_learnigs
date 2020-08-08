@@ -10,4 +10,7 @@ Python work:
 7. Polymorphism
    7.1 Ducktyping
    7.2 Operator Overloading
+   7.3 Method Overriding
+
+Iterator
     
