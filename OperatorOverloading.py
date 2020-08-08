@@ -21,6 +21,9 @@ class Student:
         else:
             return False
 
+    def __str__(self):
+        return f"{self.m1} {self.m2}"
+
 
 
 s1 = Student(58,69)
@@ -35,3 +38,4 @@ if s1 > s2:  # -> converted into Student.__gt__(s1,s2)
 else:
     print("s2 wins")
 
+print(s1)    # -> converted into Student.__str__(s1)
