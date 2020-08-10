@@ -13,4 +13,4 @@ Python work:
    7.3 Method Overriding
 
 Iterator
-    
+Generator
