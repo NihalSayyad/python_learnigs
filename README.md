@@ -15,3 +15,4 @@ Python work:
 Miscellaneous:
 1. Iterator
 2. Generator
+3. Exceptional Handling
