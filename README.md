@@ -12,5 +12,6 @@ Python work:
    7.2 Operator Overloading
    7.3 Method Overriding
 
-Iterator
-Generator
+Miscellaneous:
+1. Iterator
+2. Generator
