@@ -4,6 +4,8 @@ List : Ordered collection of valid datatyps
        can contain another list within the same list
 '''
 
+from collections import Counter
+
 list1 = [1,2,3,[4,5,6]]
 
 print(list1)
@@ -30,4 +32,13 @@ print(ip)
 print(ip[0])
 print(ip[1])
 
-only_one = ()
+only_one = ('one')
+print(type(only_one))
+only_one = ('one',)
+print(type(only_one))
+
+
+cnt = Counter({1:3,2:4})
+
+print(list(cnt.elements()))
+
