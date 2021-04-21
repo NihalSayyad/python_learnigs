@@ -15,3 +15,15 @@ print(a)
 print([1, 2, 3] + [4, 5, 6] )
 
 #Exponentional
+print(a**b)
+
+#Subtraction
+print(b-a)
+
+#Multiplication
+print(a * b)
+
+#Modulus
+print(-9 % 2)
+print(9 % -2)
+print(-9 % -2)
