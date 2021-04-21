@@ -6,3 +6,12 @@ print(a/b)
 print(a/c)
 print(d/b)
 
+print(a//b)
+print(d//b)
+
+#Addition
+a+=b
+print(a)
+print([1, 2, 3] + [4, 5, 6] )
+
+#Exponentional
