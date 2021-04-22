@@ -17,3 +17,10 @@ print(bin(60 & 30))
 
 #Bitwise OR (|)
 print(bin(60 | 30))
+
+#Bitwise Shift operators
+#Left shift of n is equivalent of multiplying the number by 2**n
+print(2 << 2)
+
+#Right shift is equivalent of dividing the number by 2**n
+print(8 >> 2)
