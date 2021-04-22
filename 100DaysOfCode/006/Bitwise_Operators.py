@@ -11,3 +11,9 @@ print(~a)
 print(bin(60))
 print(bin(30))
 print(bin(60 ^ 30))
+
+#Bitwise AND (&)
+print(bin(60 & 30))
+
+#Bitwise OR (|)
+print(bin(60 | 30))
