@@ -12,3 +12,12 @@ def display():
 decorated_func = decorator_function(display)
 
 decorated_func()
+
+#Using @ symbol for decorators
+
+@decorator_function
+def display2():
+    print('This is from Display 2')
+
+
+display2()
