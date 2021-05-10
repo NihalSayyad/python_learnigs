@@ -23,7 +23,7 @@ while response.status_code == 200 and response.json()['sessions'] == []:
 
     if counter == 10:
         break
-    time.sleep(60)
+    time.sleep(900)
 else:
     data = response.json()
     print(data['sessions'])
