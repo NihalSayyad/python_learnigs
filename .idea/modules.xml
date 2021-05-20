@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/100DaysOfCode/025/mongodb-quickstart-course/.idea/mongodb-quickstart-course.iml" filepath="$PROJECT_DIR$/100DaysOfCode/025/mongodb-quickstart-course/.idea/mongodb-quickstart-course.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python_learnigs.iml" filepath="$PROJECT_DIR$/.idea/python_learnigs.iml" />
     </modules>
   </component>
