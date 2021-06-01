@@ -33,6 +33,19 @@ class LinkedList():
             print(curr_node.data, end="->")
             curr_node = curr_node.next
 
+    def insert_after_node(self, prev_node, data):
+
+        new_node = Node(data)
+        curr_node = self.head
+        while curr_node.next.data != prev_node and curr_node.next:
+            curr_node = curr_node.next
+
+        if curr_node:
+            new_node.next = curr_node.next
+            curr_node.next = new_node
+
+
+
 llist = LinkedList()
 llist.append("A")
 llist.append("B")
@@ -42,4 +55,8 @@ print("-------------------------")
 
 llist.prepend("D")
 llist.prepend("E")
+llist.print_list()
+
+print("-----------------------------")
+llist.insert_after_node('B', 'E')
 llist.print_list()
