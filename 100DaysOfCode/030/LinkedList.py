@@ -1,5 +1,3 @@
-#Linked List (Singly Linked List)
-
 class Node():
     def __init__(self, data):
         self.data = data
@@ -37,13 +35,25 @@ class LinkedList():
 
         new_node = Node(data)
         curr_node = self.head
-        while curr_node.data != prev_node and curr_node:
+        while curr_node.next.data != prev_node and curr_node.next:
             curr_node = curr_node.next
 
         if curr_node:
             new_node.next = curr_node.next
             curr_node.next = new_node
 
+    def delete_node(self, key):
+        curr_node = self.head
+
+        if curr_node and curr_node.data == key:
+            self.head = curr_node.next
+            curr_node = None
+            return
+
+        prev_node = None
+        while curr_node and curr_node.data != key:
+            prev_node = curr_node
+            curr_node = curr_node.next
 
 
 llist = LinkedList()
@@ -53,14 +63,6 @@ llist.append("C")
 llist.print_list()
 print("\n-------------------------")
 
-llist.prepend("D")
-llist.prepend("E")
-llist.print_list()
+llist.delete_node('A')
 
-print("\n-----------------------------")
-llist.insert_after_node('E', 'Z')
-llist.print_list()
-
-print("\n------------------------------")
-llist.insert_after_node('B','X')
 llist.print_list()
