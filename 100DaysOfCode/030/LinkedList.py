@@ -59,6 +59,14 @@ class LinkedList():
             prev_node.next = curr_node.next
             curr_node = None
 
+    def delete_from_position(self, position):
+        curr_node = self.head
+        if position == 1:
+            self.head = curr_node.next
+            curr_node = None
+            return
+
+
 llist = LinkedList()
 llist.append("A")
 llist.append("B")
@@ -77,4 +85,7 @@ llist.delete_node('C')
 llist.print_list()
 print("\n-------------------------")
 llist.delete_node('F')
+llist.print_list()
+print("\n-------------------------")
+llist.delete_from_position(1)
 llist.print_list()
