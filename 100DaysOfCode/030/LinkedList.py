@@ -55,14 +55,26 @@ class LinkedList():
             prev_node = curr_node
             curr_node = curr_node.next
 
+        if curr_node:
+            prev_node.next = curr_node.next
+            curr_node = None
 
 llist = LinkedList()
 llist.append("A")
 llist.append("B")
 llist.append("C")
+llist.append("D")
+llist.append('E')
+llist.append('F')
 llist.print_list()
 print("\n-------------------------")
 
 llist.delete_node('A')
 
+llist.print_list()
+print("\n-------------------------")
+llist.delete_node('C')
+llist.print_list()
+print("\n-------------------------")
+llist.delete_node('F')
 llist.print_list()
