@@ -66,6 +66,17 @@ class LinkedList():
             curr_node = None
             return
 
+        prev_node = None
+        pos = 1
+        while curr_node and pos < position:
+            prev_node = curr_node
+            curr_node = curr_node.next
+            pos +=1
+
+        if curr_node:
+            prev_node.next = curr_node.next
+            curr_node = None
+
 
 llist = LinkedList()
 llist.append("A")
@@ -77,15 +88,18 @@ llist.append('F')
 llist.print_list()
 print("\n-------------------------")
 
-llist.delete_node('A')
+#llist.delete_node('A')
 
-llist.print_list()
+#llist.print_list()
 print("\n-------------------------")
-llist.delete_node('C')
-llist.print_list()
-print("\n-------------------------")
-llist.delete_node('F')
-llist.print_list()
+#llist.delete_node('C')
+#llist.print_list()
+#print("\n-------------------------")
+#llist.delete_node('F')
+#llist.print_list()
 print("\n-------------------------")
 llist.delete_from_position(1)
+llist.print_list()
+print("\n-------------------------")
+llist.delete_from_position(3)
 llist.print_list()
