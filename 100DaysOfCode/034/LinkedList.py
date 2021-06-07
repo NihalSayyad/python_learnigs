@@ -99,9 +99,34 @@ class LinkedList:
             new_node.next = curr_node.next
             curr_node.next = new_node
 
+    def remove_by_value(self, data):
+        curr_node = self.head
+        prev_node = None
+
+        if curr_node and curr_node.data != data:
+            prev_node = curr_node
+            curr_node = curr_node.next
+
+        if curr_node:
+            if prev_node:
+                prev_node.next = curr_node.next
+            else:
+                self.head = curr_node.next
+            curr_node = None
+
+
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.insert_values(['A','B','C','D','E'])
+    ll.insert_values(["banana", "mango", "grapes", "orange"])
     ll.print()
-    ll.insert_after_value('B','F')
+    ll.insert_after_value("mango", "apple")  # insert apple after mango
+    ll.print()
+    ll.remove_by_value("orange")  # remove orange from linked list
+    ll.print()
+    ll.remove_by_value("figs")
+    ll.print()
+    ll.remove_by_value("banana")
+    ll.remove_by_value("mango")
+    ll.remove_by_value("apple")
+    ll.remove_by_value("grapes")
     ll.print()
