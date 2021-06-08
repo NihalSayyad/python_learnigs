@@ -9,11 +9,16 @@ class HashTable:
             h += ord(char)
         return h % self.MAX
 
-    def add(self, key, val):
+    def __setitem__(self, key, val):
         h = self.get_hash(key)
-        self.arr.insert(h, val)
+        self.arr[h] = val
+
+    def __getitem__(self, key):
+        h = self.get_hash(key)
+        return self.arr[h]
 
 if __name__ == '__main__':
     t1 = HashTable()
     print(t1.get_hash('One'))
-    t1.add('Two', 2)
+    t1['Four'] = 4
+    print(t1['Four'])
