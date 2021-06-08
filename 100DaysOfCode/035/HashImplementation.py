@@ -17,8 +17,14 @@ class HashTable:
         h = self.get_hash(key)
         return self.arr[h]
 
+    def __delitem__(self, key):
+        h = self.get_hash(key)
+        self.arr[h] = None
+
 if __name__ == '__main__':
     t1 = HashTable()
     print(t1.get_hash('One'))
     t1['Four'] = 4
+    print(t1['Four'])
+    del t1['Four']
     print(t1['Four'])
