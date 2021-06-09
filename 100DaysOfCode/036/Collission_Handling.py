@@ -30,7 +30,10 @@ class HashTable:
 
     def __delitem__(self, key):
         h = self.get_hash(key)
-        self.arr[h] = None
+        for idx, element in enumerate(self.arr[h]):
+            if len(element) == 2 and element[0] == key:
+                del self.arr[h][idx]
+                return
 
 if __name__ == '__main__':
     t1 = HashTable()
@@ -41,4 +44,5 @@ if __name__ == '__main__':
     print(t1['march 6'])
     print(t1['march 17'])
 
+    del t1['march 17']
     print(t1.arr)
