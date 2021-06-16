@@ -33,3 +33,12 @@ print(stack.pop())
 print(stack.peek())
 print(stack.size())
 
+string = 'We will conquere COVID-19'
+s1 = Stack()
+for ch in string:
+    s1.push(ch)
+out = ""
+while not s1.is_empty():
+    out += s1.pop()
+
+print(out)
