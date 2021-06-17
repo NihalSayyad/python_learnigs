@@ -20,11 +20,19 @@ class Queue:
         if not self.is_empty():
             return self.container[-1]
 
-q = Queue()
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(3)
 
-print(q.container)
+def binary_numbers(n):
+    queue = Queue()
+    queue.enqueue("1")
 
-print(q.front())
+    for i in range(n):
+        front = queue.front()
+        print(" ", front)
+        queue.enqueue(front + "0")
+        queue.enqueue(front + "1")
+
+        queue.dequeue()
+
+
+if __name__ == '__main__':
+    binary_numbers(20)
