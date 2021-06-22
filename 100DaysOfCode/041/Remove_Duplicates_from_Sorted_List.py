@@ -5,7 +5,7 @@ class Solution:
         cur = head
 
         while cur:
-            while cur.next and cur.next.val == cu r.val:
+            while cur.next and cur.next.data == cur.data:
                 cur.next = cur.next.next  # skip duplicated node
             cur = cur.next  # not duplicate of current node, move to next node
         return head
