@@ -86,6 +86,25 @@ class BinarySearchTreeNode:
         right_sum = self.right.calculate_sum() if self.right else 0
         return self.data + left_sum + right_sum
 
+    def delete(self, val):
+        if val < self.data:
+            if self.left:
+                self.left = self.left.delete(val)
+        elif val > self.data:
+            if self.right:
+                self.right = self.right.delete(val)
+        else:
+            if self.left is None and self.right is None:
+                return None
+            if self.left is None:
+                return self.right
+            if self.right is None:
+                return self.left
+
+            min_val = self.right.find_min()
+            self.data = min_val
+            self.right = self.right.delete(min_val)
+        return self
 
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
@@ -96,13 +115,15 @@ def build_tree(elements):
     return root
 
 if __name__ == "__main__":
-    numbers = [2,5,4,3,1,9,8,6,10,7]
+    numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
     print(numbers_tree.in_order_traversal())
-    print(numbers_tree.search(20))
-    print(numbers_tree.search(22))
-    print(numbers_tree.find_min())
-    print(numbers_tree.find_max())
-    print(numbers_tree.calculate_sum())
-    print(numbers_tree.pre_order_traversal())
-    print(numbers_tree.post_order_traversal())
+    #print(numbers_tree.search(20))
+    #print(numbers_tree.search(22))
+    #print(numbers_tree.find_min())
+    #print(numbers_tree.find_max())
+    #print(numbers_tree.calculate_sum())
+    #print(numbers_tree.pre_order_traversal())
+    #print(numbers_tree.post_order_traversal())
+    print(numbers_tree.delete(17))
+    print(numbers_tree.in_order_traversal())
