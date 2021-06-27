@@ -36,12 +36,23 @@ class Graph:
             return None
 
         shortest_path = None
+        shortest_paths = []
         for node in self.graph_dict[start]:
             if node not in path:
                 sp = self.get_shortest_path(node, end, path)
                 if sp:
                     if shortest_path is None or len(sp) < len(shortest_path):
                         shortest_path = sp
+                        if shortest_path not in shortest_paths and shortest_paths == []:
+                            shortest_paths.append(shortest_path)
+                        else:
+                            for sps in shortest_paths:
+                                if len(sps) < len(shortest_path):
+                                    continue
+                                else:
+                                    shortest_paths.remove(sps)
+                                    shortest_paths.append(shortest_path)
+
         return shortest_path
 
 if __name__ == '__main__':
