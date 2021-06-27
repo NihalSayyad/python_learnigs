@@ -23,6 +23,21 @@ print(follower)
 print(following)
 print(edges)
 
+'''
+4
+2
+5
+7
+9
+4
+2 9
+7 2
+7 9
+9 5
+7
+9
+'''
+
 while True:
     print(follower)
     if not edges[follower]:
