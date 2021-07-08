@@ -98,11 +98,17 @@ class Graph:
 if __name__ == "__main__":
     routes = [
         ("Mumbai", "Paris"),
+        ("Paris", "Mumbai"),
         ("Mumbai", "Dubai"),
+        ("Dubai", "Mumbai"),
         ("Paris", "Dubai"),
+        ("Dubai", "Paris"),
         ("Paris", "New York"),
+        ("New York", "Paris"),
         ("Dubai", "New York"),
-        ("New York", "Toronto")
+        ("New York", "Dubai"),
+        ("New York", "Toronto"),
+        ("Toronto", "New York")
     ]
 
     route_graph = Graph(routes)
