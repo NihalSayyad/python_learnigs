@@ -78,10 +78,12 @@ class Graph:
         return shortest_path
 
     def bfs(self, src):
+        dist = {}
         q = Queue()
         q.enqueue(src)
         visited = []
         visited.append(src)
+        dist[src] = 0
 
         while not q.is_empty():
             top = q.front()
@@ -93,6 +95,9 @@ class Graph:
                     if node not in visited:
                         q.enqueue(node)
                         visited.append(node)
+                        dist[node] = dist[top] + 1
+
+        print(dist)
 
 
 if __name__ == "__main__":
