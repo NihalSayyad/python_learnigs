@@ -77,18 +77,21 @@ class Graph:
 
         return shortest_path
 
-    def bfs(self, src):
+    def bfs(self, src, dest):
         dist = {}
+        parent = {}
         q = Queue()
         q.enqueue(src)
         visited = []
         visited.append(src)
         dist[src] = 0
+        parent[src] = -1
 
         while not q.is_empty():
             top = q.front()
             print(top)
             q.dequeue()
+
 
             if top in self.graph_dict:
                 for node in self.graph_dict[top]:
@@ -96,8 +99,13 @@ class Graph:
                         q.enqueue(node)
                         visited.append(node)
                         dist[node] = dist[top] + 1
+                        parent[node] = top
 
         print(dist)
+        temp = dest
+        while temp != -1:
+            print(temp, "<--", end="")
+            temp = parent[temp]
 
 
 if __name__ == "__main__":
@@ -117,6 +125,6 @@ if __name__ == "__main__":
     ]
 
     route_graph = Graph(routes)
-    route_graph.bfs('Mumbai')
+    route_graph.bfs('Mumbai','Toronto')
     print("----------------")
-    route_graph.bfs('Dubai')
+    route_graph.bfs('Dubai','Toronto')
