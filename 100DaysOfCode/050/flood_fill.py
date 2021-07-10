@@ -9,7 +9,7 @@ def floodFill(mat, i, j, ch, color):
         return
 
     mat[i][j] = color
-
+    printMat(mat)
     floodFill(mat, i+1, j, ch, color)
     floodFill(mat, i, j+1, ch, color)
     floodFill(mat, i-1, j, ch, color)
