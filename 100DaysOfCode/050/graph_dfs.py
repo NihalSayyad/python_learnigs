@@ -31,7 +31,19 @@ class Graph:
                 self.graph_dict[start] = [end]
         print(self.graph_dict)
 
+    def dfs(self, src):
+        visited = set()
 
+        def dfsUtil(src, visited):
+            visited.add(src)
+            print(src, end=" ")
+
+            if self.graph_dict[src]:
+                for node in self.graph_dict[src]:
+                    if node not in visited:
+                        dfsUtil(node, visited)
+
+        dfsUtil(src, visited)
 
 if __name__ == "__main__":
     routes = [
@@ -50,3 +62,5 @@ if __name__ == "__main__":
     ]
 
     route_graph = Graph(routes)
+
+    route_graph.dfs('Mumbai')
