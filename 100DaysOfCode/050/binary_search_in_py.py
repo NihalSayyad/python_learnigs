@@ -37,4 +37,4 @@ if __name__ == "__main__":
 
     t1 = time.time()
     index = binary_search(numbers, number_to_find)
-    print(f"Number found at index {index} using linear search in {time.time() - t1} time")
+    print(f"Number found at index {index} using binary search in {time.time() - t1} time")
