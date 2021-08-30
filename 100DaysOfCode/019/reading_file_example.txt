@@ -1,4 +1,0 @@
-This is from the file.
-This is the second line of the text.
-This text to be appended at the end
-This text to be appended at the end
